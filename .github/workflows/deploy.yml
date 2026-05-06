@@ -23,12 +23,12 @@ jobs:
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: timer-app/package-lock.json
+          cache-dependency-path: package-lock.json
       - name: Install
-        working-directory: timer-app
+
         run: npm ci
       - name: Build
-        working-directory: timer-app
+
         run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
