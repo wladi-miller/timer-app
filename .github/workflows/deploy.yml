@@ -30,7 +30,7 @@ jobs:
         run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: timer-app/dist
+          path: dist
 
   deploy:
     needs: build
