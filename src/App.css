@@ -19,8 +19,8 @@ body {
   width: 220px;
   padding: 0.8rem;
   border: 1px solid #ccc;
-  font-size: 1.2rem;
   border-radius: 5px;
+  font-size: 1.2rem;
   appearance: textfield;
 }
 
@@ -58,9 +58,11 @@ body {
   font-weight: 600;
   border: none;
   border-radius: 10px;
+  background: #4f46e5;
   color: #ff8585;
   cursor: pointer;
   transition:
+    background 0.3s ease,
     transform 0.2s ease,
     filter 0.2s ease;
 }
@@ -68,6 +70,13 @@ body {
 .buttons button:hover {
   background: #157aff;
   color: #ffffff;
+  transform: scale(1.05);
+}
+
+.buttons button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
 }
 
 .elapsed-time {
@@ -81,14 +90,14 @@ body {
 .elapsed-label {
   margin: 0 0 0.2rem 0;
   line-height: 1.1;
-  font-size: 1.5rem; /* Größerer Text für "Verstrichene Zeit" */
+  font-size: 1.5rem;
 }
 
 .elapsed-value {
   margin: 0;
   line-height: 1.1;
   font-weight: 700;
-  font-size: 2rem; /* Größerer Text für die Zeitangabe */
+  font-size: 2rem;
 }
 
 button {
